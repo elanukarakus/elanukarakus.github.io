@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MODERN SEYAHATNAME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://i.ibb.co/d66g6Rp/logo.png" width="1240" height="150">
+    <nav style="background: #ff8e3c; padding: 10px; text-align: center; font-size:16px; width: 1240;" class=navmenu>
+      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/st">Anasayfa</a>
+      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/pl" href="">Planla</a>
+      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/if">Hakkımızda</a>
+      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/ile">İletişim</a>
+    </nav>
+    <br>
+
+    <br>
+    <form action="th" method="post">
+        <br>
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+    <div class="parent">
+        <div class="child">
+            <input type="radio" id="hangi_foto" name="hangi_foto" value="Fotoğraf 1">
+            <label for="hangi_foto">
+                <div class="card">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/04/62/1f/ulugol-tabiat-parki.jpg" alt="">
+                    <div class="details">
+                        <h4>1</h4>
+                        <p>Göl manzarasında kendinizi doğanın kollarına bırakın. Aile ortamı ve fotoğrafçıların favori noktası...</p>
+                    </div>
+                </div>  
+            </label>
+        </div>
+
+        <div class="child">
+            <input type="radio" id="css" name="hangi_foto" value="Fotoğraf 2">
+            <label for="css">
+                <div class="card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/69/a5/a1/nasrullah-camii.jpg?w=1100&h=-1&s=1" alt="">
+                    <div class="details">
+                        <h4>2</h4>
+                        <p>Mimari severler buraya! İslam kültürünün Osmanlı tarafından yansıtıldığı örneklerden biri.</p>
+                    </div>
+                </div>  
+            </label>
+        </div>
+
+        <div class="child">
+            <input type="radio" id="javascript" name="hangi_foto" value="Fotoğraf 3">
+            <label for="javascript">
+                <div class="card">
+                    <img src="https://www.kulturportali.gov.tr/contents/images/20181012103521570_Aydinpinar%20Selalesi_Ilhami%20AKTURK%20(5).jpg" alt="">
+                    <div class="details">
+                        <h4>3</h4>
+                        <p>Şelale sesi ile kendinizi şehrin yorucu gürültüsünden kurtarın...</p>
+                    </div>
+                </div>  
+            </label>
+        </div>
+
+        <div class="child">
+            <input type="radio" id="html" name="hangi_foto" value="Fotoğraf 4">
+            <label for="html">
+                <div class="card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/64/8a/80/tarihi-demirciler-carsisi.jpg?w=1200&h=-1&s=1" alt="">
+                    <div class="details">
+                        <h4>4</h4>
+                        <p>Tarihi ve kültürel hazinelerimizden... Burada gezerken kendini o dönemde yaşamadığına ikna etmek zor olmalı!</p>
+                    </div>
+                </div>  
+            </label>
+        </div>
+
+        <div class="child">
+            <input type="radio" id="xs" name="hangi_foto" value="Fotoğraf 5">
+            <label for="xs">
+                <div class="card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/67/15/1e/genel-gorunum.jpg?w=1200&h=-1&s=1" alt="">
+                    <div class="details">
+                        <h4>5</h4>
+                        <p>Kum, güneş, deniz üçlüsü bazılarımızın vazgeçilmezidir. Dalgalar eşliğinde yeni kitabınızı bitirmek istiyorsanız işte burası tam sizlik.</p>
+                    </div>
+                </div>  
+            </label>
+        </div>
+
+        <div class="child">
+            <input type="radio" id="lol" name="hangi_foto" value="Fotoğraf 6">
+            <label for="lol">
+                <div class="card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipMQDhxv_JQt_2ty0O4oywcZQyHLm0l_osfV4jaP=w296-h202-n-k-no-v1" alt="">
+                    <div class="details">
+                        <h4>6</h4>
+                        <p>İlk medeniyetlere yuva olmuş Anadolumuzun geçmişine bir yolculuk! Müze severler buraya!</p>
+                    </div>
+                </div>  
+            </label>
+        </div>
+            <br>
+            
+    </div>
+        <input type="submit" value="Öner" id="th">
+    </form>
+</body>
+</html>
+

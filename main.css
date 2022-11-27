@@ -1,0 +1,231 @@
+body {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: #eff0f3;
+}
+p {
+    color: black;
+    font-family: Verdana;
+    font-size: 1.1em;
+    display: inline-block;
+    margin:  0.1px;
+}
+p [name= "foto"]{
+  color: black;
+  font-family: Verdana;
+  font-size: 0.8em;
+  margin:1px;
+}
+title {
+    color: #0d0d0d;
+    font-family: Copperplate;
+    font-size: 5.1em;
+    display: inline-block;
+    margin:  10px;
+}
+label {
+    color: #0d0d0d;
+    font-family: Verdana;
+    font-size: 1.1em;
+    display: inline-block;
+    margin:  20px;
+}
+h1 {
+    color: #0d0d0d;
+    font-family: Verdana;
+    font-size: 2.1em;
+    display: inline-block;
+    margin:  20px;
+}
+h2 {
+    color: white;
+    font-family: Shanti;
+    font-size: 2.1em;
+    display: inline-block;
+    margin:  20px;
+}
+
+input[type="text"] {
+  width: 300px;
+  margin: 5px 5px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-family: Shanti;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+
+input[value="Fotoğraflarla Karar Ver"] {
+  width: 250px;
+  margin: 20px 20px;
+  height: 50px;
+  border: solid 1.2px #ff8e3c;
+  border-radius: 10px;
+  font-family: Shanti;
+  font-size: 1.1em;
+  font-color: #ff8e3c;
+  text-align: center;
+}
+
+
+input[value="Keşfet"] {
+  width: 250px;
+  margin: 20px 20px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-family: Shanti;
+  font-size: 1.1em;
+  font-color: #ff8e3c;
+  border: solid 1.2px #ff8e3c;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+input[value="Öner"] {
+  width: 300px;
+  margin: 30px 20px;
+  height: 50px;
+  border: solid 1.2px #ff8e3c;
+  border-radius: 10px;
+  font-family: Shanti;
+  font-size: 1.1em;
+  font-color: #ff8e3c;
+  text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border: solid 5px #ff8e3c;
+}
+
+img[name = "x"] {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 150px;
+}
+a {
+  font-family: Verdana;
+  font-size:14;
+  text-decoration: none;
+}
+p[name= "tanitim"] {
+  font-family: Verdana;
+  font-size: 1.1em;
+  text-align: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 50px;
+}
+
+.animate-bottom{
+  display: none;
+  text-align: center;
+}
+
+.card {
+  margin-left: 100px;
+  height: 15rem;
+
+  width: 15rem;
+
+  overflow: hidden;
+
+  position: relative; cursor: pointer;
+
+  border-radius: 20px;
+}
+
+.card img{
+
+  height: 100%; 
+  width: 100%;
+}
+
+.card:hover .details {
+  opacity: 1; 
+  height: 100%; 
+}
+
+.details {
+  position: absolute; left: 0;
+  bottom: 0;
+  width: 100%; height: 0;
+  background: #d9376e; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  opacity: 8; transition: 0.5s ease;
+}
+
+.details h4{
+  color: white;
+}
+
+.details p{
+  color: white;
+  font-family: Verdana;
+}
+
+.ana {
+  margin-left:530px;
+  margin-right: 50px;
+  margin-bottom: 70px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color:#D47B99; 
+  border: 0.5px;
+  width: 30%;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+
+h3[id="a"]{
+  color: #d9376e;
+  font-family: Verdana;
+  margin-top: 200px;
+}
+p[id="b"]{
+  color: #d9376e;
+  font-family: Verdana;
+  font-size: ?AYARLA BUNU!!!!!1
+}
+
+
+input [id = "hangi_foto"] {
+  position: relative;
+  left:100px;
+  top:100px;
+}
+
+input [id = "css"] {
+  position: relative;
+  left:500px;
+  top:100px;
+}
+
+.parent{
+  margin-left: 100px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 25rem 25rem 25rem;
+  grid-template-rows: 25rem 25rem;
+  padding: 1px;
+  background-color: #eff0f3;
+  border: none;
+}
+
+.child{
+  padding: 2px;
+  margin-left: 10px;
+}
