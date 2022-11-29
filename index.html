@@ -1,207 +1,135 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>MODERN SEYAHATNAME</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Elanu</title>
+  <link href="main.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <img src="https://i.ibb.co/d66g6Rp/logo.png" width="1240" height="150">    
-    <nav style="background: #ff8e3c; padding: 10px; text-align: center; font-size:16px; width: 1240;" class=navmenu>
-      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/st">Anasayfa</a>
-      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/pl">Planla</a>
-      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/if">Hakkımızda</a>
-      <a style="color:white;margin-right:20px;"font-family= Verdana href="http://127.0.0.1:5000/ile">İletişim</a>
-
-    </nav>
-    <br>
-<div class="ana">    
-    <form action="nd" method="GET">
-    <style>
-      select {
-        width: 250px;
-        height: 50px;
-        padding: 20px 20px 10px 10px;
-        font-size: 14px;
-        font-family: Verdana;
-        border-radius: 10px; 
-        border: solid 1.2px #ff8e3c;
-        background: url("https://icons.iconarchive.com/icons/thiago-silva/palm/128/Places-icon.png") 96% / 15% no-repeat #eee;
-      }
-      select:focus {
-        outline: none;
-        border: solid 2px #343148ff;
-      }
-
-    </style>
-        <br>
-        <label for="filtre_input">Neye göre karşılaştırmak istersiniz?</label>
-        <br>
-        <select name="filtre_input" id="filt" method= "POST" onchange="filtreinputla();" required>
-         <option value="">Kategori</option>
-         <option value="il">İl</option>
-         <option value="tur">Tür</option>
-         <option value="renk">Renk</option>
-         <option value="duygu">Duygu</option>
-         <option value="aciklama">Genel</option>
-        </select>
-<script type="text/javascript">
-    function filtreinputla() {
-        var filtreselect = document.getElementById("filt").value;
-        console.log(filtreselect);
-        document.getElementById("filtreselectid").innerHTML = filtreselect;
-    }
-</script>
-        <br>
-        <label for="yer_input">Nereyle karşılaştırmak istersiniz?</label>
-        <br>
-        <select name="yer_input" id="yer" method= "POST" onchange="yerinputla();" required>
-         <option value="">Yer</option>
-         <option value="karagol">Artvin - Borçka Karagöl Tabiat Parkı</option>
-         <option value="mencuna selalesi ">Artvin - Mençuna Şelalesi</option>
-         <option value="cifte kopru">Artvin - Çifte Köprü</option>
-         <option value="maral selalesi">Artvin - Maral Şelalesi</option>
-         <option value="atatepe">Artvin - Atatepe</option>
-         <option value="firtina deresi">Rize - Fırtına Deresi</option>
-         <option value="gito yaylasi">Rize - Gito Yaylası</option>
-         <option value="kıbledag camii">Rize - Kıbledağ Camii</option>
-         <option value="rize kalesi">Rize - Rize Kalesi</option>
-         <option value="kackar dagları milli parki">Rize - Kaçkar Dağları Milli Parkı</option>
-         <option value="baksi muzesi">Bayburt - Baksı Müzesi</option>
-         <option value="aydintepe yeralti sehri">Bayburt - Aydıntepe Yeraltı Şehri</option>
-         <option value="bayburt kalesi">Bayburt - Bayburt Kalesi</option>
-         <option value="kop dagi mudafasi tarihi milli parki">Bayburt - Kop Dağı Müdafası Tarihi Milli Parkı</option>
-         <option value="coruh nehri">Bayburt - Çoruh Nehri</option>
-         <option value="ataturk kosku">Trabzon - Atatürk Köşkü</option>
-         <option value="sumele manastiri">Trabzon - Sümele Manastırı</option>
-         <option value="boztepe trabzon">Boztepe - Trabzon</option>
-         <option value="altindere vadisi milli parki">Trabzon - Altındere Vadisi Milli Parkı</option>
-         <option value="ayasofya muzesi">Trabzon - Ayasofya Müzesi</option>
-         <option value="tomara selalesi tabiat parki">Gümüşhane - Tomara Şelalesi Tabiat Parkı</option>
-         <option value="artabel golleri tabiat parki">Gümüşhane - Artabel Gölleri Tabiat Parkı</option>
-         <option value="karaca magarasi">Gümüşhane - Karaca Mağarası</option>
-         <option value="limni golu tabiat parki">Gümüşhane - Limni Gölü Tabiat Parkı</option>
-         <option value="ikizevler kent muzesi">Gümüşhane - İkizevler Kent Müzesi</option>
-         <option value="kuzalan selalesi">Giresun - Kuzalan Şelalesi</option>
-         <option value="kulakkaya yaylasi">Giresun - Kulakkaya Yaylası</option>
-         <option value="giresun kalesi">Giresun - Giresun Kalesi</option>
-         <option value="mavi gol">Giresun - Mavi Göl</option>
-         <option value="sis dagı">Giresun - Sis Dağı</option>
-         <option value="boztepe ordu">Ordu - Boztepe</option>
-         <option value="cambası kayak merkezi">Ordu - Çambaşı Kayak Merkezi</option>
-         <option value="ulugol tabiat parki">Ordu - Ulugöl Tabiat Parkı</option>
-         <option value="yason kilisesi">Ordu - Yason Kilisesi</option>
-         <option value="persembe yaylasi">Ordu - Perşembe Yaylası</option>
-         <option value="ballica magarasi">Tokat - Ballıca Mağarası</option>
-         <option value="tokat muzesi">Tokat - Tokat Müzesi</option>
-         <option value="tas han">Tokat - Taşhan</option>
-         <option value="almus baraj golu">Tokat - Almus Baraj Gölü</option>
-         <option value="tokat mevlihanesi">Tokat - Tokat Mevlihanesi</option>
-         <option value="boraboy golu tabiat parki">Amasya - Boraboy Gölü Tabiat Parkiüı</option>
-         <option value="amasya kalesi">Amasya - Amasya Kalesi</option>
-         <option value="2. beyazid camiisi ve kulliyesi">Amasya - 2.Beyazid Camiisi ve Külliyesi</option>
-         <option value="amasya arkeoloji muzesi">Amasya - Amasya Arkeoloji Müzesi</option>
-         <option value="kral kaya mezarligi">Amasya - Kral Kaya Mezarlığı</option>
-         <option value="sahinkaya kanyonu">Samsun - Şahinkaya Kanyonu</option>
-         <option value="bandirma vapur muzesi">Samsun - Bandirma Vapur Müzesi</option>
-         <option value="onur aniti">Samsun - Onur Anıtı</option>
-         <option value="amazon heykeli">Samsun - Amazon Heykeli</option>         
-         <option value="gogceli camii">Samsun - Göğceli Camii</option>
-         <option value="hamsilos koyu">Sinop - Hamsilos Koyu</option>
-         <option value="erfelek tatlica selaleleri tabiat parki">Sinop - Erfelek Tatkıca Şelaleleri Tabiat Parkı</option>
-         <option value="inceburun feneri">Sinop - İnceburun Feneri</option>
-         <option value="sinop hapisanesi">Sinop - Tarihi Cezaevi</option>
-         <option value="sinop arkeoloji muzesi">Sinop - Sinop Arkeoloji Müzesi</option>
-         <option value="alacahoyuk muzesi">Çorum - Alacahöyük Müzesi</option>
-         <option value="corum muzesi">Çorum - Çorum Müzesi</option>
-         <option value="aslanli kapi">Çorum - Aslanlı Kapı</option>
-         <option value="incesu kanyonu">Çorum - İncesu Kanyonu</option>
-         <option value="ilica selalesi">Kastamonu - Ilıca Şelalesi</option>
-         <option value="kastamonu muzesi">Kastamonu - Kastamonu Müzesi</option>
-         <option value="valla kanyonu seyir terasi">Kastamonu - Valla Kanyonu Seyir Terası</option>
-         <option value="hz. pir seyh saban-i veli kulliyesi">Kastamonu - Hz.Pir Seyh Sban-ı Veli Külliyesi</option>
-         <option value="nasrullah camii">Kastamonu - Nasrullah Camii</option>
-         <option value="ulukaya kanyonu ve selalesi">Bartın - Ulukaya Kanyonu ve Şelalesi</option>
-         <option value="inkum plaji">Bartın - İnkum Plajı</option>
-         <option value="bartin kent muzesi">Bartın - Bartın Kent Müzesi</option>
-         <option value="uluyayla">Bartın - Uluyayla</option>
-         <option value="balamba tabiat parki">Bartın - Balamba Tabiat Parkı</option>
-         <option value="seker kanyonu">Karabük - Şeker Kanyonu</option>
-         <option value="yenice ormani">Karabük - Yenice Ormanı</option>
-         <option value="tarihi demirciler carsisi">Karabük - Tarihi Demirciler Çarşısı</option>
-         <option value="egriova goleti">Karabük - Eğriova Göleti</option>
-         <option value="kasim sipahioglu konaği">Karabük - Kasım Sipahioğlu Konağı</option>
-         <option value="gokgol magarasi">Zonguldak - Gökgöl Mağarası</option>
-         <option value="maden muzesi">Zonguldak - Maden Müzesi</option>
-         <option value="eregli muzesi">Zonguldak - Ereğli Müzesi</option>
-         <option value="cehennem ağzı magarasi">Zonguldak - Cehennem Ağzı Mağarası</option>
-         <option value="filyos plaji">Zonguldak - Filyos Plajı</option>
-         <option value="guzeldere selalesi tabiat parki">Düzce - Güzeldere Şelalesi Tabiat Parkı</option>
-         <option value="samandere selalesi tabiat anıtı">Düzce - Samandere Şelalesi Tabiat Anıtı</option>
-         <option value="aydinpinar selaleleri tabiat parki">Düzce - Aydınpınar Şelaleleri Tabiat Parkı</option>
-         <option value="aktas selalesi">Düzce - Aktaş Şelalesi</option>
-         <option value="konuralp muzesi">Düzce - Konuralp Müzesi</option>
-         <option value="abant golu">Bolu - Abant Gölü</option>
-         <option value="golcuk tabiat parki">Bolu - Gölcük Tabiat Parkı</option>
-         <option value="yedigoller milli parki">Bolu - Yedigöller Milli Parkı</option>
-         <option value="karagol tabiat parki">Bolu - Karagöl Tabiat Parki</option>
-         <option value="ayikayasi tabiat parki">Bolu - Ayıkayası Tabiat Parkı</option>
-        </select>
-        <br>
+  <div class="img">
+    <div class="nav">
+      <ul>
+        <li><a class="c" href="#about">About</a></li>
+        <li><a class="c" href="#p">Portfolio</a></li>
+        <li><a class="c" href="https://substack.com/profile/105945026-elanu-karakus">Newsletter</a></li>
+        <li><a class="c" href="#">Contact</a></li>
+      </ul>
+    </div>
 
 
-<br>
-        {% for message in get_flashed_messages() %}
-             <p>{{ message | safe }}</p>
-         {% endfor %}
-<br>
-<script type="text/javascript">
-    function yerinputla() {
-        var yerselect = document.getElementById("yer").value;
-        console.log(yerselect);
-        document.getElementById("yerselectid").innerHTML = yerselect;
-    }
-</script>
-        <input type="submit" value="Keşfet" onclick = "showPage()" id="nd">
-
-</style>
-</head>
-
-</div>
-
-<body style="margin:0;">
+    <div class="showcase-content">
+      <h1>Hi! I'm Elanu...</h1>
+      <p>a 16 yo innovator who wants to make an impact.</p>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/elanu-karakus/">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/elanukarakus/">Instagram</a></li>
+        <li><a href="https://medium.com/@elanu.karakus">Medium</a></li>
+        <li><a href="https://substack.com/profile/105945026-elanu-karakus">Substack</a></li>
+      </ul>
 
 
+    </div>
+  </div>
 
 
-<script>
+  <div>
+    <p id="#about" class="aboutp"> I'm Elanu Karakuş, a 16 year olds girl from Turkey. I'm highly passionate about
+      creating change
+      by using science and technology. I'm an ambitious, curious and eager-to-learn person who has embodied this way of
+      thinking: To solve a problem, you have to acknowledge that it exists and build your skills first. So, I am
+      bringing
+      my A game to learn new things to work towards a better future.
+    </p>
+  </div>
+  <h2 id="p">Latest Articles</h2>
+  <div class="container">
+    <div id="1" class="card">
+      <div class="card-header">
+        <img src="https://miro.medium.com/max/828/0*TwX0XRwtREyCtTBB.webp" alt="rover" />
+      </div>
+      <div id="img1" class="card-body">
+        <a class="inv"
+          href="https://medium.com/@elanu.karakus/is-this-the-carbon-atom-you-are-looking-for-ai-to-predict-cnts-atomic-coordination-11847b6e46e4"><span
+            class="tag tag-teal">Is this the carbon atom you are looking for? -AI to predict CNT’s atomic
+            coordination.</span></a>
 
-var myVar;
 
-function showPage() {
-  document.getElementById("myDiv").style.display = "block";
-}
+        <p>
+          Technology is all about making things faster and easier. Thanks to our computers, we don’t need to do math,
+          design, or experiment when it comes to science.
 
-</script>
+          One area that really benefits from the great abilities of computers is nanotechnology...
+        </p>
 
-<h3 id="a">Neyle karşılaştıracağına emin değil misin?  </h2>
-<br>
-<p id="b">Farklı fotoğrafları incele, hoşuna gidene turunu ayarla!</p>
+      </div>
+    </div>
+    <div id="2" class="card">
+      <div class="card-header">
+        <img src="https://miro.medium.com/max/828/1*07Z6S6RVfEpcueKlyGUTDw.png" alt="ballons" />
+      </div>
+      <div class="card-body"> <a class="inv"
+          href="https://medium.com/@elanu.karakus/what-is-energy-harvesting-491f1dedfb3d"><span
+            class="tag tag-purple">What is Energy Harvesting?</span></a>
 
-    
-    <br>
-    
+        <p>
+          Do you like charging your phone every day? What about finding plugs for your computer outside? I know it is
+          annoying. But it does not have to be. Researchers are looking for solutions -energy harvesting...
+        </p>
 
+      </div>
+    </div>
+    <div id="3" class="card">
+      <div class="card-header">
+        <img src="https://miro.medium.com/max/828/0*RQaYItdcTUZ7hMM4" alt="city" />
+      </div>
+      <div class="card-body">
+        <a card="inv" href="https://monolop.com/nanotechnology-for-energy-applications-db9e077876ee"><span
+            class="tag tag-pink">Nanotechnology for Energy Applications</span>
+        </a>
 
-<br>
+        <p>
+          I know you heard about the problem with fossil fuels. And the solutions with renewable energy. But you also
+          could realize, renewables are not a big part of our lives. Why? Because they have their own problems — they
+          are not as efficient or cheap...
+        </p>
 
-    </form>
-    <h3 hidden class="filters" id = "filtreselect_p" name="filtreselect_p"><span id="filtreselectid"></span></h3>
-    <h4 hidden class="yers" id = "yerselect_p" type = "hidden" name = "yerselect_p"><span id="yerselectid"></span></h3>
-    <br>
-    <form action = "th" method="post">
-         <input type="submit" value="Fotoğraflarla Karar Ver" id="th">
-    </form>
+      </div>
+
+    </div>
+    <div id="4" class="card">
+      <div class="card-header">
+        <img src="https://miro.medium.com/max/828/1*dzEkzJgYQJM-Dj1VM5avrg.webp" alt="rover" />
+      </div>
+      <div class="card-body">
+        <a class="inv" href="https://medium.com/@elanu.karakus/could-ai-become-a-musician-82c13f380528"><span
+            class="tag tag-teal">Could AI become a musician?</span></a>
+        <p>
+          Art is a way of expressing an individual’s feelings and thoughts with conscious use of the imagination. When
+          you look at the definition, you might think “Does AI use imagination?”, “Can AI be an individual, or have
+          feelings?”. The answer is “Not yet.”
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <!--   <div class="val">
+    <div class="sshowcase-content">
+      <h1>My Values...</h1>
+    </div>
+  </div> -->
+  <div class="form">
+    <script type="text/javascript" src="https://form.jotform.com/jsform/223324708798062"></script>
+    <script src="script.js"></script>
+  </div>
+
 </body>
-</html>
 
+</html>
